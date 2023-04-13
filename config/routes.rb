@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get 'chat', to: 'message#chat'
+  resources :messages, only: [:create]
+  get 'chat', to: 'messages#chat'
   # Defines the root path route ("/")
   # root "articles#index"
 end
