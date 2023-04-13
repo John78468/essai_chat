@@ -1,0 +1,9 @@
+<% @messages.each do |message| %>
+<%= message.content %>
+<% end %>
+
+
+<%= form_for Message.new do |f| %>
+<%= f.text_area :content %>
+<%= f.submit 'Send' %>
+<% end %>
